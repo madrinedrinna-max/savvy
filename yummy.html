@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Don't Wait</title>
+<link href="yummy.css" rel="stylesheet">
+
+</head>
+
+<body>
+ <header>
+   <div class="logo">JOJOZ DINER</div>
+    <class="nav-links">
+      <a href="#home">HOME</a>
+      <a href="about#">ABOUT</a>
+      <a href="#contact">CONTACT</a>
+    <div class="nav-center</div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <p class="small">Are You Hungry?</p>
+      <h1>Don't Wait</h1>
+      <p class="sub">Let start to order food now</p>
+      <a href="#" class="btn">Check out menu</a>
+    </div>
+
+    <div class="hero-image-wrap">
+      <div class="circle">
+        <img id="Happy Faces" src="people.jpg">
+      </div>
+      <div class="social">
+        <a href="#">f</a>
+        <a href="#">t</a>
+        <a href="#">&#9733;</a>
+        <a href="#">&#9993;</a>
+      </div>
+    </div>
+
+    <div class="thumbs">
+      <div class="thumb active" onclick="changeDish(this,'fast 1.jpg')"><img src="fast 1.jpg"></div>
+      <div class="thumb" onclick="changeDish(this,'fast 2.jpg')"><img src="fast 2.jpg"></div>
+      <div class="thumb" onclick="changeDish(this,'fast 3.jpg')"><img src="fast 3.jpg"></div>
+    </div>
+  </section>
+
+
+  <section class="section alt" id="about us">
+      <div class="container about-grid">
+        <div>
+          <h2>About Jojoz Dinner</h2>
+          <p>Jojoz Dinner is a source of tasty and delicious meals that create better memories when individuals, famlies, couples come to taste the difference.
+             We also do packaging and deliveries for our customers.
+          </p>
+          <div class="info-box">
+              <h3>Why choose us?</h3>
+              <ul>
+                <li>Affordable prices.</li>
+                <li>Doing deliveries.</li>
+                <li>Best customer care.</li>
+                <li>Easy ordering and deliveries.</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section class="section" id="contact us">
+        <div class="container contact-box">
+            <h2>Contact Us</h2>
+            <p>Call, message, or WhatsApp us to place your order</p>
+            <div class="contact-links">
+                <a href="https://wa.me/756118494" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                <a href="mailto:hello@jojozdinner.com">Email</a>
+                <a href="tel:0756118494">Phone</a>
+            </div>
+        </div>
+  </section>
+
+<script>
+function changeDish(el, src){
+  document.getElementById('happyFaces').style.opacity=0;
+  setTimeout(()=>{
+    document.getElementById('happyFaces').src=src;
+    document.getElementById('happyFaces').style.opacity=1;
+  },200);
+  document.querySelectorAll('.thumb').forEach(t=>t.classList.remove('active'));
+  el.classList.add('active');
+}
+</script>
+</body>
+</html>
